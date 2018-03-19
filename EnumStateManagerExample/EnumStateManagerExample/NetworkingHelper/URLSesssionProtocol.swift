@@ -13,6 +13,7 @@ typealias responseCompletionHandler = (_ data: Data?, _ response:  URLResponse?,
 protocol URLSessionDataTaskProtocol {
     func resume()
     func resumeAndAppendToTaskList<T>(of: T.Type)
+    static func cancelAllTaskList<T>(of: T.Type)
 }
 
 extension URLSessionDataTask: URLSessionDataTaskProtocol{ }
